@@ -1,0 +1,215 @@
+{
+  "query_source": "question only; no expected answer used for reranking",
+  "count": 20,
+  "averages": {
+    "recall_before": 0.922047669880308,
+    "recall_after": 0.922047669880308,
+    "precision_before": 0.976875,
+    "precision_after": 0.953125,
+    "delta_precision": -0.02375,
+    "gold_faithfulness": 0.5821890553152563,
+    "retrieved_faithfulness": 0.8112386535202099
+  },
+  "results": [
+    {
+      "id": "E01",
+      "recall_before": 0.9375,
+      "recall_after": 0.9375,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.9375,
+      "retrieved_faithfulness": 0.9375
+    },
+    {
+      "id": "E02",
+      "recall_before": 0.9375,
+      "recall_after": 0.9375,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.37037037037037035,
+      "retrieved_faithfulness": 0.7777777777777778
+    },
+    {
+      "id": "E03",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.35294117647058826,
+      "retrieved_faithfulness": 0.9411764705882353
+    },
+    {
+      "id": "E04",
+      "recall_before": 0.9090909090909091,
+      "recall_after": 0.9090909090909091,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.75,
+      "retrieved_faithfulness": 0.8333333333333334
+    },
+    {
+      "id": "E05",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.9285714285714286,
+      "retrieved_faithfulness": 1.0
+    },
+    {
+      "id": "M01",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.5526315789473685,
+      "retrieved_faithfulness": 0.8421052631578947
+    },
+    {
+      "id": "M02",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.8076923076923077,
+      "retrieved_faithfulness": 0.8846153846153846
+    },
+    {
+      "id": "M03",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 0.95,
+      "delta_precision": -0.050000000000000044,
+      "gold_faithfulness": 0.8888888888888888,
+      "retrieved_faithfulness": 1.0
+    },
+    {
+      "id": "M04",
+      "recall_before": 0.9166666666666666,
+      "recall_after": 0.9166666666666666,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.391304347826087,
+      "retrieved_faithfulness": 0.7391304347826086
+    },
+    {
+      "id": "M05",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 0.95,
+      "precision_after": 0.8875,
+      "delta_precision": -0.0625,
+      "gold_faithfulness": 0.6486486486486487,
+      "retrieved_faithfulness": 0.8378378378378378
+    },
+    {
+      "id": "M06",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.8333333333333334,
+      "retrieved_faithfulness": 0.875
+    },
+    {
+      "id": "M07",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.2903225806451613,
+      "retrieved_faithfulness": 0.8709677419354839
+    },
+    {
+      "id": "H01",
+      "recall_before": 0.9354838709677419,
+      "recall_after": 0.9354838709677419,
+      "precision_before": 0.95,
+      "precision_after": 0.95,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.8260869565217391,
+      "retrieved_faithfulness": 0.8695652173913043
+    },
+    {
+      "id": "H02",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.5283018867924528,
+      "retrieved_faithfulness": 0.7924528301886793
+    },
+    {
+      "id": "H03",
+      "recall_before": 0.6585365853658537,
+      "recall_after": 0.6585365853658537,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.391304347826087,
+      "retrieved_faithfulness": 0.6376811594202898
+    },
+    {
+      "id": "H04",
+      "recall_before": 0.875,
+      "recall_after": 0.875,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.6037735849056604,
+      "retrieved_faithfulness": 0.8679245283018868
+    },
+    {
+      "id": "H05",
+      "recall_before": 0.9811320754716981,
+      "recall_after": 0.9811320754716981,
+      "precision_before": 0.8875,
+      "precision_after": 0.95,
+      "delta_precision": 0.0625,
+      "gold_faithfulness": 0.8032786885245902,
+      "retrieved_faithfulness": 0.8524590163934426
+    },
+    {
+      "id": "A01",
+      "recall_before": 0.42857142857142855,
+      "recall_after": 0.42857142857142855,
+      "precision_before": 0.75,
+      "precision_after": 0.325,
+      "delta_precision": -0.425,
+      "gold_faithfulness": 0.03636363636363636,
+      "retrieved_faithfulness": 0.23636363636363636
+    },
+    {
+      "id": "A02",
+      "recall_before": 0.9523809523809523,
+      "recall_after": 0.9523809523809523,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.23076923076923078,
+      "retrieved_faithfulness": 0.7307692307692307
+    },
+    {
+      "id": "A03",
+      "recall_before": 0.9090909090909091,
+      "recall_after": 0.9090909090909091,
+      "precision_before": 1.0,
+      "precision_after": 1.0,
+      "delta_precision": 0.0,
+      "gold_faithfulness": 0.4716981132075472,
+      "retrieved_faithfulness": 0.6981132075471698
+    }
+  ]
+}

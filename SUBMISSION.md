@@ -47,15 +47,18 @@ Các file sinh ra trong quá trình chạy (artifacts) là tùy chọn (optional
 
 Hãy chạy các kiểm tra sau và tích chọn đầy đủ trước khi nộp bài:
 
-- [ ] Repository đã được đặt đúng tên chuẩn: `K4-L3B-<HoVaTen>-<MSSV>-AIEvaluation`.
-- [ ] Chạy `python validate_golden_dataset.py` báo `PASS`.
-- [ ] Toàn bộ required tests pass khi chạy `pytest tests/ -v` (41 passed, 1 skipped nếu không làm bonus).
-- [ ] `golden_dataset.json` đủ 20 QA (5 Easy + 7 Medium + 5 Hard + 3 Adversarial).
-- [ ] Đã kiểm tra `artifacts/actual_answers.json` sau khi chạy RAG (`python domain_assistant.py`).
-- [ ] `exercises.md` đã hoàn thành đầy đủ: Exercise 3.2 có đủ năm metrics và ba cases thấp nhất; Exercise 3.3 có rubric 1–5 và edge cases (Exercise 3.4 & 3.5 nếu chọn làm bonus).
-- [ ] `reflection.md` có ba 5 Whys analyses, bảng failure taxonomy và improvement log / regression strategy.
-- [ ] `solution/solution.py` là bản hoàn thiện của `template.py` (học viên đã copy sau khi hoàn thành code).
-- [ ] Không commit `.env`, API key hoặc dữ liệu nhạy cảm lên GitHub.
+- [x] Repository đặt đúng tên: `K4-L3B-NguyenThanhLuan-2A202602769-AIEvaluation`.
+- [x] `python validate_golden_dataset.py` báo `PASS`.
+- [x] Required tests pass: 42/42 tests gốc, thêm 5 edge-case tests, tổng 47 passed.
+- [x] `golden_dataset.json` đủ 20 QA (5 Easy + 7 Medium + 5 Hard + 3 Adversarial).
+- [x] Kiểm tra 20 actual answers của RAG run đã lưu ngày 01/10/2026, không có inference errors; chunks có provenance.
+- [x] `exercises.md` có bảng năm metrics, ba cases thấp nhất, rubric ba dimensions, edge cases và hai bonus.
+- [x] `reflection.md` có ba 5 Whys analyses, taxonomy, improvement log và regression strategy.
+- [x] `solution/solution.py` đồng bộ bản hoàn thiện `template.py`.
+- [x] `.env` được ignore và không nằm trong danh sách commit.
+
+Học viên còn cần review phần phân tích có AI hỗ trợ, bảo đảm giải thích được
+code/nhận định theo `RULES.md`, và tự nộp link repository lên Codelab.
 
 ---
 

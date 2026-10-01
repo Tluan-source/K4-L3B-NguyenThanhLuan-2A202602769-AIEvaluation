@@ -26,6 +26,7 @@ The reranking helper is an optional bonus exercise and may remain unimplemented.
 from __future__ import annotations
 
 import json
+import math
 import re
 from dataclasses import dataclass, field
 from typing import Any, Callable
@@ -363,8 +364,12 @@ def rerank_by_overlap(contexts: list[str], query: str) -> list[str]:
     Hint: sorted(contexts, key=lambda c: len(_tokenize(c) & _tokenize(query)),
                  reverse=True)
     """
-    # TODO (Bonus — Exercise 3.5): implement the reranker
-    raise NotImplementedError("Implement rerank_by_overlap")
+    query_tokens = _tokenize(query)
+    return sorted(
+        contexts,
+        key=lambda chunk: len(_tokenize(chunk) & query_tokens),
+        reverse=True,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -447,9 +452,14 @@ class LLMJudge:
 
         if isinstance(parsed, dict):
             payload = parsed["scores"] if isinstance(parsed.get("scores"), dict) else parsed
-            for key, value in payload.items():
-                if isinstance(value, (int, float)) and not isinstance(value, bool):
-                    scores[key] = float(value)
+            for key in scores:
+                value = payload.get(key)
+                if (
+                    isinstance(value, (int, float))
+                    and not isinstance(value, bool)
+                    and math.isfinite(value)
+                ):
+                    scores[key] = max(0.0, min(1.0, float(value)))
 
         return {"scores": scores, "reasoning": raw}
 
@@ -635,11 +645,15 @@ class BenchmarkRunner:
         baseline_avg_completeness = _avg(baseline_results, "completeness")
 
         regressions: list[str] = []
-        if baseline_avg_faithfulness - new_avg_faithfulness > 0.05:
+        def _regressed(baseline: float, current: float) -> bool:
+            drop = baseline - current
+            return drop > 0.05 and not math.isclose(drop, 0.05, abs_tol=1e-12)
+
+        if _regressed(baseline_avg_faithfulness, new_avg_faithfulness):
             regressions.append("faithfulness")
-        if baseline_avg_relevance - new_avg_relevance > 0.05:
+        if _regressed(baseline_avg_relevance, new_avg_relevance):
             regressions.append("relevance")
-        if baseline_avg_completeness - new_avg_completeness > 0.05:
+        if _regressed(baseline_avg_completeness, new_avg_completeness):
             regressions.append("completeness")
 
         return {

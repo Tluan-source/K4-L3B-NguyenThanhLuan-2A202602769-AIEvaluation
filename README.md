@@ -2,6 +2,30 @@
 
 **AICB-P1 · Phase 1 · Ngày 14 trong 15 · K4**
 
+## Bài nộp Nguyễn Thanh Luân - 2A202602769
+
+Bản hoàn thiện: `solution/solution.py` đồng bộ `template.py`, dataset 20 QA
+validator PASS, 47 tests pass (42 tests gốc + 5 edge cases). Benchmark tái lập
+trên 20 câu trả lời RAG đã lưu đạt 9/20 passed (45%); điểm benchmark không phải
+điểm lab. Xem [exercises.md](exercises.md) và [reflection.md](reflection.md).
+
+Kiểm tra offline, không cần API key:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest tests/ -v
+python validate_golden_dataset.py
+python evaluate_answers.py
+python verify_lab.py
+```
+
+`artifacts/reranking_results.json` lưu thí nghiệm query-only reranking trên cả
+20 cases; chạy `python verify_lab.py --write-reranking` để tái tạo.
+GitHub Actions kiểm tra unit tests, dataset và tính nhất quán của artifacts.
+RAG answers có sẵn được sinh ngày 01/10/2026; lần hoàn thiện này đánh giá lại
+offline, không sinh answers mới. Phân tích có AI hỗ trợ, cần học viên review
+theo `RULES.md` trước khi tự nộp link repository lên Codelab.
+
 Lab này là bài **AI Evaluation**. Bạn sẽ hoàn thiện evaluation core trong `template.py`, xây dựng một golden dataset 20 câu, chạy một hệ thống RAG thật trên corpus **OrbitTech Store Customer Support**, rồi phân tích kết quả benchmark.
 
 > Hệ thống RAG trong `domain_assistant.py` là **system under evaluation**. Nó sinh câu trả lời; `template.py` là **evaluation engine** chấm các câu trả lời đó. Hai phần có vai trò hoàn toàn độc lập.
